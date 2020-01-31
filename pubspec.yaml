@@ -1,8 +1,8 @@
 name: gs_flutter_widget
 description: A flutter package to create reusable widget for list. Simple and easy to understand.
 version: 0.0.1
-author:
-homepage:
+author: Nicodemus Lin <nicodemusdemuse@gmail.com>
+homepage: https://github.com/ming290496/gs_flutter_widget.git
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
