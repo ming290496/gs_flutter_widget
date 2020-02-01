@@ -1,6 +1,7 @@
-[![Pub](https://img.shields.io/badge/Pub-0.1.1-orange.svg?style=flat-square)](https://pub.dev/packages/gs_flutter_widget)
+[![Pub](https://img.shields.io/pub/v/gs_flutter_widget)](https://pub.dev/packages/gs_flutter_widget)
+![sized](https://img.shields.io/github/repo-size/ming290496/gs_flutter_widget)
 
-# gs_flutter_package
+# gs_flutter_widget
 A Flutter Package to create reusable widget for list. Simple and easy to use.
 
 <img src="https://github.com/ming290496/gs_flutter_widget/blob/master/example/img/1.jpeg?raw=true" width="200"/>
