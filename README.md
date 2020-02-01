@@ -1,14 +1,55 @@
-# gs_flutter_widget
+[![Pub](https://img.shields.io/badge/Pub-0.1.0-orange.svg?style=flat-square)](https://pub.dev/packages/gs_flutter_widget)
 
-A flutter package to create reusable widget for list. Simple and easy to understand.
+# gs_flutter_package
+A Flutter Package to create reusable widget for list. Simple and easy to use.
 
-## Getting Started
+<img src="https://github.com/ming290496/gs_flutter_widget/blob/master/example/img/1.jpeg?raw=true" width="200"/>
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+## Usage
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+Add the ListView in your screen. Then add GSFlutterWidget inside children attribute.
+[Full example](https://github.com/ming290496/gs_flutter_widget/tree/master/example)
+
+ ```dart
+
+  @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        appBar: AppBar(
+          title: Text('GS Flutter Widget'),
+        ),
+        body: ListView(
+          children: <Widget>[
+            GSFlutterWidget.circleImageWithText(
+              context,
+              headerTitle: 'Circle Image With Text',
+              headerShowIcon: false,
+              itemCount: 4,
+              itemTitle: (index) {
+                return items[index].title;
+              },
+              itemImage: (index) {
+                return items[index].image;
+              },
+              onItemClicked: (index) {
+                print(items[index].title);
+              },
+            ),
+            GSFlutterWidget.roundedSquareImage(
+              context,
+              headerTitle: 'Rounded Square Image',
+              headerShowIcon: true,
+              itemCount: items.length,
+              itemImage: (index) {
+                return items[index].image;
+              },
+              onItemClicked: (index) {
+                print(items[index].title);
+              },
+            ),
+          ],
+        ),
+      );
+    }
+
+ ```
