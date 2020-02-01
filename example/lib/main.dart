@@ -103,6 +103,18 @@ class MyHomePage extends StatelessWidget {
               print(items[index].title);
             },
           ),
+          GSFlutterWidget.roundedSquareImage(
+            context,
+            headerTitle: 'Rounded Square Image',
+            headerShowIcon: true,
+            itemCount: items.length,
+            itemImage: (index) {
+              return items[index].image;
+            },
+            onItemClicked: (index) {
+              print(items[index].title);
+            },
+          ),
         ],
       ),
     );
