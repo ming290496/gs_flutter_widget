@@ -9,3 +9,7 @@ Added circleImageWithText widget
 ## 0.1.1
 ___
 Added roundedSquareImage widget & updated readme
+
+## 0.1.2
+___
+Updated readme
