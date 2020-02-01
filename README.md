@@ -1,4 +1,4 @@
-[![Pub](https://img.shields.io/badge/Pub-0.1.0-orange.svg?style=flat-square)](https://pub.dev/packages/gs_flutter_widget)
+[![Pub](https://img.shields.io/badge/Pub-0.1.1-orange.svg?style=flat-square)](https://pub.dev/packages/gs_flutter_widget)
 
 # gs_flutter_package
 A Flutter Package to create reusable widget for list. Simple and easy to use.
@@ -8,6 +8,7 @@ A Flutter Package to create reusable widget for list. Simple and easy to use.
 ## Usage
 
 Add the ListView in your screen. Then add GSFlutterWidget inside children attribute.
+<br/>
 [Full example](https://github.com/ming290496/gs_flutter_widget/tree/master/example)
 
  ```dart
