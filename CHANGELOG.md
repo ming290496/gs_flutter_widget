@@ -13,3 +13,7 @@ Added roundedSquareImage widget & updated readme
 ## 0.1.2
 ___
 Updated readme
+
+## 0.1.4
+___
+Added new widgets
