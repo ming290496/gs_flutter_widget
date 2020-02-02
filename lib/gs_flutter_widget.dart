@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:gs_flutter_widget/widgets/circle_image_with_text_widget.dart';
 import 'package:gs_flutter_widget/widgets/rounded_square_image_widget.dart';
 import 'package:gs_flutter_widget/widgets/rounded_square_image_with_author_widget.dart';
-import 'package:gs_flutter_widget/widgets/section_header_widget.dart';
+import 'package:gs_flutter_widget/widgets/rounded_square_image_with_button_widget.dart';
+import 'package:gs_flutter_widget/widgets/_section_header_widget.dart';
+import 'package:gs_flutter_widget/widgets/square_circle_with_button_widget.dart';
 
 class GSFlutterWidget {
   static Widget circleImageWithText(
@@ -101,6 +103,73 @@ class GSFlutterWidget {
                   authorImage(index),
                   created(index),
                   authorName(index), () {
+                onItemClicked(index);
+              });
+            },
+            scrollDirection: Axis.horizontal,
+          ),
+        ),
+      ],
+    );
+  }
+
+  static Widget roundedSquareImageWithButton(
+    BuildContext context, {
+    @required String headerTitle,
+    Function() onHeaderClicked,
+    bool headerShowIcon,
+    @required int itemCount,
+    @required String Function(int index) itemImage,
+    @required String Function(int index) itemTitle,
+    @required Function(int index) onItemClicked,
+  }) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: <Widget>[
+        SectionHeaderWidget.build(
+            headerTitle, onHeaderClicked, headerShowIcon ?? true),
+        Container(
+          height: 250,
+          child: ListView.builder(
+            padding: EdgeInsets.all(10),
+            itemCount: itemCount,
+            itemBuilder: (context, index) {
+              return RoundedSquareImageWithButtonWidget.build(
+                  context, itemTitle(index), itemImage(index), () {
+                onItemClicked(index);
+              });
+            },
+            scrollDirection: Axis.horizontal,
+          ),
+        ),
+      ],
+    );
+  }
+
+  static Widget squareCircleWithButton(
+    BuildContext context, {
+    @required String headerTitle,
+    Function() onHeaderClicked,
+    bool headerShowIcon,
+    @required int itemCount,
+    @required String Function(int index) itemImage,
+    @required String Function(int index) itemTitle,
+    @required String Function(int index) itemSubTitle,
+    @required Function(int index) onItemClicked,
+  }) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: <Widget>[
+        SectionHeaderWidget.build(
+            headerTitle, onHeaderClicked, headerShowIcon ?? true),
+        Container(
+          height: 260,
+          child: ListView.builder(
+            padding: EdgeInsets.all(10),
+            itemCount: itemCount,
+            itemBuilder: (context, index) {
+              return SquareCircleWithButtonWidget.build(context,
+                  itemTitle(index), itemSubTitle(index), itemImage(index), () {
                 onItemClicked(index);
               });
             },

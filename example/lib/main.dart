@@ -105,6 +105,7 @@ class MyHomePage extends StatelessWidget {
         title: Text('GS Flutter Widget'),
       ),
       body: ListView(
+        padding: EdgeInsets.only(bottom: 50),
         children: <Widget>[
           GSFlutterWidget.circleImageWithText(
             context,
@@ -141,7 +142,7 @@ class MyHomePage extends StatelessWidget {
           ),
           GSFlutterWidget.roundedSquareImageWithAuthor(
             context,
-            headerTitle: 'Rounded Square Image',
+            headerTitle: 'Rounded Square Img With Author',
             headerShowIcon: true,
             onHeaderClicked: () {
               print('Header Clicked');
@@ -161,6 +162,45 @@ class MyHomePage extends StatelessWidget {
             },
             created: (index) {
               return items[index].created;
+            },
+          ),
+          GSFlutterWidget.roundedSquareImageWithButton(
+            context,
+            headerTitle: 'Rounded Square Img With Button',
+            headerShowIcon: true,
+            onHeaderClicked: () {
+              print('Header Clicked');
+            },
+            itemCount: items.length,
+            itemTitle: (index) {
+              return items[index].title;
+            },
+            itemImage: (index) {
+              return items[index].image;
+            },
+            onItemClicked: (index) {
+              print(items[index].title);
+            },
+          ),
+          GSFlutterWidget.squareCircleWithButton(
+            context,
+            headerTitle: 'Square Circle With Button',
+            headerShowIcon: true,
+            onHeaderClicked: () {
+              print('Header Clicked');
+            },
+            itemCount: items.length,
+            itemTitle: (index) {
+              return items[index].title;
+            },
+            itemSubTitle: (index) {
+              return items[index].subtitle;
+            },
+            itemImage: (index) {
+              return items[index].image;
+            },
+            onItemClicked: (index) {
+              print(items[index].title);
             },
           ),
         ],
