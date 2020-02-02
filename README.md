@@ -10,7 +10,7 @@ A Flutter Package to create reusable widget for list. Simple and easy to use.
 ## Usage
 
 Add the ListView in your screen. Then add GSFlutterWidget inside children attribute.
-<br/>
+
 [Full example](https://github.com/ming290496/gs_flutter_widget/tree/master/example)
 
  ```dart
