@@ -31,53 +31,71 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatelessWidget {
   List<ExampleModel> items = [
     ExampleModel(
-      title: 'First',
-      subtitle: 'This is First',
-      desc: 'This is First desc',
-      category: 'First',
-      image:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRw9qqSQiOrG4HzzhV5oTNpN47bwEX5R2NkfTtrywR0gt9zNsEA',
-    ),
+        title: 'First',
+        subtitle: 'This is First',
+        desc: 'This is First desc',
+        category: 'First',
+        image:
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRw9qqSQiOrG4HzzhV5oTNpN47bwEX5R2NkfTtrywR0gt9zNsEA',
+        authorImage:
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSPieJWfhQsrvyxFduWradsTYy4QsPlux0V2t_6coMKDr0kIY_k',
+        authorName: 'First Author',
+        created: '26 Days Ago'),
     ExampleModel(
-      title: 'Second',
-      subtitle: 'This is Second',
-      desc: 'This is Second desc',
-      category: 'Second',
-      image:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRw9qqSQiOrG4HzzhV5oTNpN47bwEX5R2NkfTtrywR0gt9zNsEA',
-    ),
+        title: 'Second',
+        subtitle: 'This is Second',
+        desc: 'This is Second desc',
+        category: 'Second',
+        image:
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRw9qqSQiOrG4HzzhV5oTNpN47bwEX5R2NkfTtrywR0gt9zNsEA',
+        authorImage:
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSPieJWfhQsrvyxFduWradsTYy4QsPlux0V2t_6coMKDr0kIY_k',
+        authorName: 'Second Author',
+        created: '26 Days Ago'),
     ExampleModel(
-      title: 'Third',
-      subtitle: 'This is Third',
-      desc: 'This is Third desc',
-      category: 'Third',
-      image:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRw9qqSQiOrG4HzzhV5oTNpN47bwEX5R2NkfTtrywR0gt9zNsEA',
-    ),
+        title: 'Third',
+        subtitle: 'This is Third',
+        desc: 'This is Third desc',
+        category: 'Third',
+        image:
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRw9qqSQiOrG4HzzhV5oTNpN47bwEX5R2NkfTtrywR0gt9zNsEA',
+        authorImage:
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSPieJWfhQsrvyxFduWradsTYy4QsPlux0V2t_6coMKDr0kIY_k',
+        authorName: 'Third Author',
+        created: '26 Days Ago'),
     ExampleModel(
-      title: 'Fourth',
-      subtitle: 'This is Fourth',
-      desc: 'This is Fourth desc',
-      category: 'Fourth',
-      image:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRw9qqSQiOrG4HzzhV5oTNpN47bwEX5R2NkfTtrywR0gt9zNsEA',
-    ),
+        title: 'Fourth',
+        subtitle: 'This is Fourth',
+        desc: 'This is Fourth desc',
+        category: 'Fourth',
+        image:
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRw9qqSQiOrG4HzzhV5oTNpN47bwEX5R2NkfTtrywR0gt9zNsEA',
+        authorImage:
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSPieJWfhQsrvyxFduWradsTYy4QsPlux0V2t_6coMKDr0kIY_k',
+        authorName: 'Fourth Author',
+        created: '26 Days Ago'),
     ExampleModel(
-      title: 'Fifth',
-      subtitle: 'This is Fifth',
-      desc: 'This is Fifth desc',
-      category: 'Fifth',
-      image:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRw9qqSQiOrG4HzzhV5oTNpN47bwEX5R2NkfTtrywR0gt9zNsEA',
-    ),
+        title: 'Fifth',
+        subtitle: 'This is Fifth',
+        desc: 'This is Fifth desc',
+        category: 'Fifth',
+        image:
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRw9qqSQiOrG4HzzhV5oTNpN47bwEX5R2NkfTtrywR0gt9zNsEA',
+        authorImage:
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSPieJWfhQsrvyxFduWradsTYy4QsPlux0V2t_6coMKDr0kIY_k',
+        authorName: 'Fifth Author',
+        created: '26 Days Ago'),
     ExampleModel(
-      title: 'Sixth',
-      subtitle: 'This is Sixth',
-      desc: 'This is Sixth desc',
-      category: 'Sixth',
-      image:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRw9qqSQiOrG4HzzhV5oTNpN47bwEX5R2NkfTtrywR0gt9zNsEA',
-    ),
+        title: 'Sixth',
+        subtitle: 'This is Sixth',
+        desc: 'This is Sixth desc',
+        category: 'Sixth',
+        image:
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRw9qqSQiOrG4HzzhV5oTNpN47bwEX5R2NkfTtrywR0gt9zNsEA',
+        authorImage:
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSPieJWfhQsrvyxFduWradsTYy4QsPlux0V2t_6coMKDr0kIY_k',
+        authorName: 'Sixth Author',
+        created: '26 Days Ago'),
   ];
 
   @override
@@ -92,6 +110,9 @@ class MyHomePage extends StatelessWidget {
             context,
             headerTitle: 'Circle Image With Text',
             headerShowIcon: false,
+            onHeaderClicked: () {
+              print('Header Clicked');
+            },
             itemCount: 4,
             itemTitle: (index) {
               return items[index].title;
@@ -107,12 +128,39 @@ class MyHomePage extends StatelessWidget {
             context,
             headerTitle: 'Rounded Square Image',
             headerShowIcon: true,
+            onHeaderClicked: () {
+              print('Header Clicked');
+            },
             itemCount: items.length,
             itemImage: (index) {
               return items[index].image;
             },
             onItemClicked: (index) {
               print(items[index].title);
+            },
+          ),
+          GSFlutterWidget.roundedSquareImageWithAuthor(
+            context,
+            headerTitle: 'Rounded Square Image',
+            headerShowIcon: true,
+            onHeaderClicked: () {
+              print('Header Clicked');
+            },
+            itemCount: items.length,
+            itemImage: (index) {
+              return items[index].image;
+            },
+            onItemClicked: (index) {
+              print(items[index].title);
+            },
+            authorName: (index) {
+              return items[index].authorName;
+            },
+            authorImage: (index) {
+              return items[index].authorImage;
+            },
+            created: (index) {
+              return items[index].created;
             },
           ),
         ],

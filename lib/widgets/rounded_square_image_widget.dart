@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
 class RoundedSquareImageWidget {
-  static Widget build(BuildContext context, String image) {
+  static Widget build(BuildContext context, String image, Function onClick) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        onClick();
+      },
       child: Container(
         margin: EdgeInsets.only(left: 5, right: 5),
         width: MediaQuery.of(context).size.width * 0.28,
