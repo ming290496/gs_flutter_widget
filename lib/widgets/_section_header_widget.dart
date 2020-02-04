@@ -17,8 +17,8 @@ class SectionHeaderWidget {
               overflow: TextOverflow.ellipsis,
               style: TextStyle(
                 color: Colors.black,
-                fontWeight: FontWeight.bold,
-                fontSize: 20,
+                fontWeight: FontWeight.w600,
+                fontSize: 18,
                 fontFamily: 'Inter',
               ),
             ),

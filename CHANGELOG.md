@@ -17,3 +17,7 @@ Updated readme
 ## 0.1.5
 ___
 Added new widgets
+
+## 0.1.6
+___
+Modified header text style

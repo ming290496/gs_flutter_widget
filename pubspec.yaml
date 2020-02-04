@@ -1,6 +1,6 @@
 name: gs_flutter_widget
 description: A Flutter Package to create reusable widget for list. Simple and easy to use.
-version: 0.1.5
+version: 0.1.6
 author: Nicodemus Lin <nicodemusdemuse@gmail.com>
 homepage: https://github.com/ming290496/gs_flutter_widget.git
 
@@ -20,6 +20,17 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
+
+  uses-material-design: true
+
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-Regular.ttf
+        - asset: assets/fonts/Inter-Bold.ttf
+        - asset: assets/fonts/Inter-Medium.ttf
+        - asset: assets/fonts/Inter-SemiBold.ttf
+          weight: 700
 
   # To add assets to your package, add an assets section, like this:
   # assets:
