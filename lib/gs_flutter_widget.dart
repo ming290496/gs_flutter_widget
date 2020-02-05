@@ -11,6 +11,7 @@ import 'package:gs_flutter_widget/widgets/square_with_rating_widget.dart';
 import 'package:gs_flutter_widget/widgets/standard_large_vertical_widget.dart';
 import 'package:gs_flutter_widget/widgets/standard_medium_horizontal_widget.dart';
 import 'package:gs_flutter_widget/widgets/standard_small_horizontal_widget.dart';
+import 'package:gs_flutter_widget/widgets/standard_small_vertical_widget.dart';
 
 class GSFlutterWidget {
   static Widget circleImageWithText(
@@ -334,6 +335,53 @@ class GSFlutterWidget {
               );
             },
             scrollDirection: Axis.horizontal,
+          ),
+        ),
+      ],
+    );
+  }
+
+  static Widget standardSmallVertical(
+    BuildContext context, {
+    @required String headerTitle,
+    Function() onHeaderClicked,
+    bool headerShowIcon,
+    @required int itemCount,
+    @required String Function(int index) itemImage,
+    @required String Function(int index) itemTitle,
+    @required String Function(int index) authorName,
+    @required Function(int index) onItemClicked,
+  }) {
+    return Column(
+      children: <Widget>[
+        SectionHeaderWidget.build(
+            headerTitle, onHeaderClicked, headerShowIcon ?? true),
+        Card(
+          margin: EdgeInsets.only(left: 10, right: 10),
+          child: ListView.separated(
+            separatorBuilder: (context, index) {
+              return Divider(
+                indent: 15,
+                endIndent: 15,
+                height: 0,
+                thickness: 1,
+              );
+            },
+            physics: NeverScrollableScrollPhysics(),
+            shrinkWrap: true,
+            itemCount: itemCount,
+            itemBuilder: (context, index) {
+              return StandardSmallVertical.build(
+                context,
+                itemTitle(index),
+                itemImage(index),
+                authorName(index),
+                () {
+                  onItemClicked(index);
+                },
+              );
+            },
+            scrollDirection: Axis.vertical,
           ),
         ),
       ],
