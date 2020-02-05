@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gs_flutter_widget/constants/gs_style.dart';
 
 class RoundedSquareImageWithButtonWidget {
   static Widget build(
@@ -31,11 +32,7 @@ class RoundedSquareImageWithButtonWidget {
                 textAlign: TextAlign.center,
                 maxLines: 3,
                 overflow: TextOverflow.ellipsis,
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontFamily: 'Inter',
-                    color: Colors.white,
-                    shadows: [textShadow]),
+                style: GSStyle.contentTitleWhiteWithShadowStyle,
               ),
               RaisedButton(
                 onPressed: () {
@@ -49,6 +46,7 @@ class RoundedSquareImageWithButtonWidget {
                 child: Text(
                   'LIHAT DETAIL',
                   textAlign: TextAlign.center,
+                  style: GSStyle.smallTextButtonStyle,
                 ),
               ),
             ],

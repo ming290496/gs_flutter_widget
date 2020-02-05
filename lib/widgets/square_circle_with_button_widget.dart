@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gs_flutter_widget/constants/gs_style.dart';
 
 class SquareCircleWithButtonWidget {
   static Widget build(BuildContext context, String title, String subTitle,
@@ -28,19 +29,14 @@ class SquareCircleWithButtonWidget {
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
                 textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                ),
+                style: GSStyle.contentTitleStyle,
               ),
               Text(
                 subTitle,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.grey,
-                  fontSize: 13,
-                ),
+                style: GSStyle.contentSubTitleStyle,
               ),
               SizedBox(
                 height: 10,
@@ -49,7 +45,7 @@ class SquareCircleWithButtonWidget {
                 onPressed: () {
                   onClick();
                 },
-                color: Color(0xFF5E6FD5),
+                color: Colors.blue,
                 textColor: Colors.white,
                 shape: RoundedRectangleBorder(
                   borderRadius: new BorderRadius.circular(10.0),
@@ -57,6 +53,7 @@ class SquareCircleWithButtonWidget {
                 child: Text(
                   'DETAIL',
                   textAlign: TextAlign.center,
+                  style: GSStyle.smallTextButtonStyle,
                 ),
               )
             ],

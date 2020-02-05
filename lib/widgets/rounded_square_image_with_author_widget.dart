@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:gs_flutter_widget/constants/gs_style.dart';
 
 class RoundedSquareImageWithAuthorWidget {
   static Widget build(BuildContext context, String image, String authorImage,
       String created, String authorName, Function onClick) {
-    final textShadow = Shadow(
-      blurRadius: 2.0,
-      color: Colors.black,
-      offset: Offset(1.0, 1.0),
-    );
     return GestureDetector(
       onTap: () {
         onClick();
@@ -36,23 +32,15 @@ class RoundedSquareImageWithAuthorWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: <Widget>[
-                    Text(
-                      authorName,
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                          shadows: [textShadow]),
-                    ),
+                    Text(authorName,
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                        style: GSStyle.contentTitleWhiteWithShadowStyle),
                     Text(
                       created,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 10,
-                          shadows: [textShadow]),
+                      style: GSStyle.contentSubTitleWhiteWithShadowStyle,
                     ),
                   ],
                 ),

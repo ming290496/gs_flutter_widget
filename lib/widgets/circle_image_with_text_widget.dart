@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gs_flutter_widget/constants/gs_style.dart';
 
 class CircleImageWithTextWidget {
   static Widget build(
@@ -25,7 +26,7 @@ class CircleImageWithTextWidget {
             ),
             Text(
               title,
-              style: TextStyle(fontWeight: FontWeight.bold),
+              style: GSStyle.contentTitleStyle,
             ),
           ],
         ),

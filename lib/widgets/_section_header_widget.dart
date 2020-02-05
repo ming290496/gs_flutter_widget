@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gs_flutter_widget/constants/gs_style.dart';
 
 class SectionHeaderWidget {
   static Widget build(String title, Function onClick, bool isShowIcon) {
@@ -15,12 +16,7 @@ class SectionHeaderWidget {
               title,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
-              style: TextStyle(
-                color: Colors.black,
-                fontWeight: FontWeight.w600,
-                fontSize: 18,
-                fontFamily: 'Inter',
-              ),
+              style: GSStyle.headerTitleStyle,
             ),
           ),
           Visibility(
