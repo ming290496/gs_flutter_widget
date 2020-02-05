@@ -7,6 +7,7 @@ A Flutter Package to create reusable widget for list. Simple and easy to use.
 
 <p float="left">
     <img src="https://github.com/ming290496/gs_flutter_widget/blob/master/example/img/4.jpeg?raw=true" width="200"/>
+    <br>
     <img src="https://github.com/ming290496/gs_flutter_widget/blob/master/example/img/3.jpeg?raw=true" width="200"/>
 </p>
 
