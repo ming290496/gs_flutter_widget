@@ -40,7 +40,10 @@ class MyHomePage extends StatelessWidget {
         authorImage:
             'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSPieJWfhQsrvyxFduWradsTYy4QsPlux0V2t_6coMKDr0kIY_k',
         authorName: 'First Author',
-        created: '26 Days Ago'),
+        created: '26 Days Ago',
+        type: 'First Type',
+        rate: '4.5',
+        reviewer: '1234'),
     ExampleModel(
         title: 'Second',
         subtitle: 'This is Second',
@@ -51,7 +54,10 @@ class MyHomePage extends StatelessWidget {
         authorImage:
             'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSPieJWfhQsrvyxFduWradsTYy4QsPlux0V2t_6coMKDr0kIY_k',
         authorName: 'Second Author',
-        created: '26 Days Ago'),
+        created: '26 Days Ago',
+        type: 'Second Type',
+        rate: '4.5',
+        reviewer: '1234'),
     ExampleModel(
         title: 'Third',
         subtitle: 'This is Third',
@@ -62,7 +68,10 @@ class MyHomePage extends StatelessWidget {
         authorImage:
             'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSPieJWfhQsrvyxFduWradsTYy4QsPlux0V2t_6coMKDr0kIY_k',
         authorName: 'Third Author',
-        created: '26 Days Ago'),
+        created: '26 Days Ago',
+        type: 'Third Type',
+        rate: '4.5',
+        reviewer: '1234'),
     ExampleModel(
         title: 'Fourth',
         subtitle: 'This is Fourth',
@@ -73,7 +82,10 @@ class MyHomePage extends StatelessWidget {
         authorImage:
             'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSPieJWfhQsrvyxFduWradsTYy4QsPlux0V2t_6coMKDr0kIY_k',
         authorName: 'Fourth Author',
-        created: '26 Days Ago'),
+        created: '26 Days Ago',
+        type: 'Fourth Type',
+        rate: '4.5',
+        reviewer: '1234'),
     ExampleModel(
         title: 'Fifth',
         subtitle: 'This is Fifth',
@@ -84,7 +96,10 @@ class MyHomePage extends StatelessWidget {
         authorImage:
             'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSPieJWfhQsrvyxFduWradsTYy4QsPlux0V2t_6coMKDr0kIY_k',
         authorName: 'Fifth Author',
-        created: '26 Days Ago'),
+        created: '26 Days Ago',
+        type: 'Fifth Type',
+        rate: '4.5',
+        reviewer: '1234'),
     ExampleModel(
         title: 'Sixth',
         subtitle: 'This is Sixth',
@@ -95,7 +110,10 @@ class MyHomePage extends StatelessWidget {
         authorImage:
             'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSPieJWfhQsrvyxFduWradsTYy4QsPlux0V2t_6coMKDr0kIY_k',
         authorName: 'Sixth Author',
-        created: '26 Days Ago'),
+        created: '26 Days Ago',
+        type: 'Sixth Type',
+        rate: '4.5',
+        reviewer: '1234'),
   ];
 
   @override
@@ -103,8 +121,8 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('GS Flutter Widget'),
-        backgroundColor: Color(0xFFFAFAFC),
       ),
+      backgroundColor: Color(0xFFFAFAFC),
       body: ListView(
         padding: EdgeInsets.only(bottom: 50),
         children: <Widget>[
@@ -199,6 +217,33 @@ class MyHomePage extends StatelessWidget {
             },
             itemImage: (index) {
               return items[index].image;
+            },
+            onItemClicked: (index) {
+              print(items[index].title);
+            },
+          ),
+          GSFlutterWidget.squareWithRating(
+            context,
+            headerTitle: 'Square With Rating',
+            headerShowIcon: true,
+            onHeaderClicked: () {
+              print('Header Clicked');
+            },
+            itemCount: items.length,
+            itemTitle: (index) {
+              return items[index].title;
+            },
+            itemImage: (index) {
+              return items[index].image;
+            },
+            itemRate: (index) {
+              return items[index].rate;
+            },
+            itemType: (index) {
+              return items[index].type;
+            },
+            itemReviewer: (index) {
+              return items[index].reviewer;
             },
             onItemClicked: (index) {
               print(items[index].title);

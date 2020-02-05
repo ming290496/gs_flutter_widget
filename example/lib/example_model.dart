@@ -7,6 +7,9 @@ class ExampleModel {
   String authorName;
   String authorImage;
   String created;
+  String type;
+  String rate;
+  String reviewer;
 
   ExampleModel(
       {this.title,
@@ -16,7 +19,10 @@ class ExampleModel {
       this.category,
       this.authorName,
       this.authorImage,
-      this.created});
+      this.created,
+      this.type,
+      this.rate,
+      this.reviewer});
 
 //  ExampleModel.fromJson(Map<String, dynamic> json) {
 //    title = json['title'];

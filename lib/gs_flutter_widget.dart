@@ -7,6 +7,7 @@ import 'package:gs_flutter_widget/widgets/rounded_square_image_with_author_widge
 import 'package:gs_flutter_widget/widgets/rounded_square_image_with_button_widget.dart';
 import 'package:gs_flutter_widget/widgets/_section_header_widget.dart';
 import 'package:gs_flutter_widget/widgets/square_circle_with_button_widget.dart';
+import 'package:gs_flutter_widget/widgets/square_with_rating_widget.dart';
 
 class GSFlutterWidget {
   static Widget circleImageWithText(
@@ -172,6 +173,49 @@ class GSFlutterWidget {
                   itemTitle(index), itemSubTitle(index), itemImage(index), () {
                 onItemClicked(index);
               });
+            },
+            scrollDirection: Axis.horizontal,
+          ),
+        ),
+      ],
+    );
+  }
+
+  static Widget squareWithRating(
+    BuildContext context, {
+    @required String headerTitle,
+    Function() onHeaderClicked,
+    bool headerShowIcon,
+    @required int itemCount,
+    @required String Function(int index) itemImage,
+    @required String Function(int index) itemTitle,
+    @required String Function(int index) itemRate,
+    @required String Function(int index) itemReviewer,
+    @required String Function(int index) itemType,
+    @required Function(int index) onItemClicked,
+  }) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: <Widget>[
+        SectionHeaderWidget.build(
+            headerTitle, onHeaderClicked, headerShowIcon ?? true),
+        Container(
+          height: 190,
+          child: ListView.builder(
+            padding: EdgeInsets.all(10),
+            itemCount: itemCount,
+            itemBuilder: (context, index) {
+              return SquareWithRatingWidget.build(
+                context,
+                itemTitle(index),
+                itemImage(index),
+                itemRate(index),
+                itemReviewer(index),
+                itemType(index),
+                () {
+                  onItemClicked(index);
+                },
+              );
             },
             scrollDirection: Axis.horizontal,
           ),

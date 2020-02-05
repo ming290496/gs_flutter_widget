@@ -39,6 +39,13 @@ class GSStyle {
     fontSize: 12,
   );
 
+  static TextStyle categoryTitleStyle = TextStyle(
+    color: Color(0xFF11243D).withOpacity(0.74),
+    fontWeight: GSFontWeight.medium,
+    fontFamily: 'Inter',
+    fontSize: 12,
+  );
+
   static Shadow textShadow = Shadow(
     blurRadius: 2.0,
     color: Colors.black,
