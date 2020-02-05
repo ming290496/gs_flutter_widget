@@ -24,4 +24,8 @@ Modified header text style
 
 ## 1.0.1
 ___
-Finish all widget
+Finished all widget
+
+## 1.0.2
+___
+Updated readme
