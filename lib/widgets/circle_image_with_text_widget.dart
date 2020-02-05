@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gs_flutter_widget/constants/gs_color.dart';
 import 'package:gs_flutter_widget/constants/gs_style.dart';
 
 class CircleImageWithTextWidget {
@@ -17,6 +18,7 @@ class CircleImageWithTextWidget {
             Container(
               height: MediaQuery.of(context).size.width * 0.25 - 5 - 10,
               child: CircleAvatar(
+                backgroundColor: GSColor.placeholderImageColor,
                 backgroundImage: NetworkImage(image),
                 radius: MediaQuery.of(context).size.width * 0.25 - 5 - 10,
               ),

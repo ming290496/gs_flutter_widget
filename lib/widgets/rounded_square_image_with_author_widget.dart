@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gs_flutter_widget/constants/gs_color.dart';
 import 'package:gs_flutter_widget/constants/gs_style.dart';
 
 class RoundedSquareImageWithAuthorWidget {
@@ -16,12 +17,14 @@ class RoundedSquareImageWithAuthorWidget {
           alignment: Alignment.bottomCenter,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
+              color: GSColor.placeholderImageColor,
               image: DecorationImage(
                   image: NetworkImage(image), fit: BoxFit.cover)),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: <Widget>[
               CircleAvatar(
+                backgroundColor: GSColor.placeholderImageColor,
                 backgroundImage: NetworkImage(authorImage),
               ),
               SizedBox(

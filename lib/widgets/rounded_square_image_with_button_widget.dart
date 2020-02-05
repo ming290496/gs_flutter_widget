@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gs_flutter_widget/constants/gs_color.dart';
 import 'package:gs_flutter_widget/constants/gs_style.dart';
 
 class RoundedSquareImageWithButtonWidget {
@@ -21,6 +22,7 @@ class RoundedSquareImageWithButtonWidget {
           alignment: Alignment.center,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
+              color: GSColor.placeholderImageColor,
               image: DecorationImage(
                   image: NetworkImage(image), fit: BoxFit.cover)),
           child: Column(

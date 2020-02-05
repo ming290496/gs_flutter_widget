@@ -103,6 +103,7 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('GS Flutter Widget'),
+        backgroundColor: Color(0xFFFAFAFC),
       ),
       body: ListView(
         padding: EdgeInsets.only(bottom: 50),

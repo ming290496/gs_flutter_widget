@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gs_flutter_widget/constants/gs_color.dart';
 import 'package:gs_flutter_widget/constants/gs_style.dart';
 
 class SquareCircleWithButtonWidget {
@@ -18,6 +19,7 @@ class SquareCircleWithButtonWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               CircleAvatar(
+                backgroundColor: GSColor.placeholderImageColor,
                 backgroundImage: NetworkImage(image),
                 radius: 40,
               ),
