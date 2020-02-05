@@ -270,6 +270,27 @@ class MyHomePage extends StatelessWidget {
               print(items[index].title);
             },
           ),
+          GSFlutterWidget.standardMediumHorizontal(
+            context,
+            headerTitle: 'Standard Medium Horizontal',
+            headerShowIcon: true,
+            onHeaderClicked: () {
+              print('Header Clicked');
+            },
+            itemCount: items.length,
+            itemTitle: (index) {
+              return items[index].title;
+            },
+            itemImage: (index) {
+              return items[index].image;
+            },
+            authorName: (index) {
+              return items[index].authorName;
+            },
+            onItemClicked: (index) {
+              print(items[index].title);
+            },
+          ),
         ],
       ),
     );

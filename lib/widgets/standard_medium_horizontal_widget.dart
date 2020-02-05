@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gs_flutter_widget/constants/gs_color.dart';
 import 'package:gs_flutter_widget/constants/gs_style.dart';
 
-class StandardLargeVerticalWidget {
+class StandardMediumHorizontalWidget {
   static Widget build(BuildContext context, String title, String image,
       String authorName, Function onClick) {
     return GestureDetector(
@@ -10,8 +10,8 @@ class StandardLargeVerticalWidget {
         onClick();
       },
       child: Container(
-        height: 210,
         margin: EdgeInsets.only(left: 5, right: 5),
+        width: MediaQuery.of(context).size.width * 0.82,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
@@ -36,7 +36,7 @@ class StandardLargeVerticalWidget {
             SizedBox(
               height: 5,
             ),
-            Text('by $authorName.', style: GSStyle.contentSubTitleStyle),
+            Text('by $authorName', style: GSStyle.contentSubTitleStyle),
           ],
         ),
       ),

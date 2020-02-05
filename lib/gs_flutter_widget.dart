@@ -9,6 +9,7 @@ import 'package:gs_flutter_widget/widgets/_section_header_widget.dart';
 import 'package:gs_flutter_widget/widgets/square_circle_with_button_widget.dart';
 import 'package:gs_flutter_widget/widgets/square_with_rating_widget.dart';
 import 'package:gs_flutter_widget/widgets/standard_large_vertical_widget.dart';
+import 'package:gs_flutter_widget/widgets/standard_medium_horizontal_widget.dart';
 
 class GSFlutterWidget {
   static Widget circleImageWithText(
@@ -242,7 +243,7 @@ class GSFlutterWidget {
             headerTitle, onHeaderClicked, headerShowIcon ?? true),
         ListView.builder(
           physics: NeverScrollableScrollPhysics(),
-          padding: EdgeInsets.all(10),
+          padding: EdgeInsets.only(left: 10, right: 10),
           shrinkWrap: true,
           itemCount: itemCount,
           itemBuilder: (context, index) {
@@ -257,6 +258,44 @@ class GSFlutterWidget {
             );
           },
           scrollDirection: Axis.vertical,
+        ),
+      ],
+    );
+  }
+
+  static Widget standardMediumHorizontal(
+    BuildContext context, {
+    @required String headerTitle,
+    Function() onHeaderClicked,
+    bool headerShowIcon,
+    @required int itemCount,
+    @required String Function(int index) itemImage,
+    @required String Function(int index) itemTitle,
+    @required String Function(int index) authorName,
+    @required Function(int index) onItemClicked,
+  }) {
+    return Column(
+      children: <Widget>[
+        SectionHeaderWidget.build(
+            headerTitle, onHeaderClicked, headerShowIcon ?? true),
+        Container(
+          height: 230,
+          child: ListView.builder(
+            padding: EdgeInsets.all(10),
+            itemCount: itemCount,
+            itemBuilder: (context, index) {
+              return StandardMediumHorizontalWidget.build(
+                context,
+                itemTitle(index),
+                itemImage(index),
+                authorName(index),
+                () {
+                  onItemClicked(index);
+                },
+              );
+            },
+            scrollDirection: Axis.horizontal,
+          ),
         ),
       ],
     );
