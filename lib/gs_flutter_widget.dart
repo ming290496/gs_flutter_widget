@@ -8,6 +8,7 @@ import 'package:gs_flutter_widget/widgets/rounded_square_image_with_button_widge
 import 'package:gs_flutter_widget/widgets/_section_header_widget.dart';
 import 'package:gs_flutter_widget/widgets/square_circle_with_button_widget.dart';
 import 'package:gs_flutter_widget/widgets/square_with_rating_widget.dart';
+import 'package:gs_flutter_widget/widgets/standard_large_vertical_widget.dart';
 
 class GSFlutterWidget {
   static Widget circleImageWithText(
@@ -219,6 +220,43 @@ class GSFlutterWidget {
             },
             scrollDirection: Axis.horizontal,
           ),
+        ),
+      ],
+    );
+  }
+
+  static Widget standardLargeVertical(
+    BuildContext context, {
+    @required String headerTitle,
+    Function() onHeaderClicked,
+    bool headerShowIcon,
+    @required int itemCount,
+    @required String Function(int index) itemImage,
+    @required String Function(int index) itemTitle,
+    @required String Function(int index) authorName,
+    @required Function(int index) onItemClicked,
+  }) {
+    return Column(
+      children: <Widget>[
+        SectionHeaderWidget.build(
+            headerTitle, onHeaderClicked, headerShowIcon ?? true),
+        ListView.builder(
+          physics: NeverScrollableScrollPhysics(),
+          padding: EdgeInsets.all(10),
+          shrinkWrap: true,
+          itemCount: itemCount,
+          itemBuilder: (context, index) {
+            return StandardLargeVerticalWidget.build(
+              context,
+              itemTitle(index),
+              itemImage(index),
+              authorName(index),
+              () {
+                onItemClicked(index);
+              },
+            );
+          },
+          scrollDirection: Axis.vertical,
         ),
       ],
     );
