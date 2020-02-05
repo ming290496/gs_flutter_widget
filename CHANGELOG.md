@@ -21,3 +21,7 @@ Added new widgets
 ## 0.1.6
 ___
 Modified header text style
+
+## 1.0.1
+___
+Finish all widget
